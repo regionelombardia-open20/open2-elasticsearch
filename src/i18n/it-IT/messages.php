@@ -15,4 +15,8 @@ return [
     '#navitem_indefinite_article' => 'le',
     '#navitem_plural' => 'Pagine pubbliche',
     '#navitem_singular' => 'Pagina pubblica',
+    'Search' => 'Ricerca',
+    'Searched at' => 'Cercato il',
+    'Search history' => 'Storico ricerche',
+    'Back' => 'Indietro',
 ];

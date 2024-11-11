@@ -17,5 +17,7 @@ interface ModelToElasticTransformerInterface
      */
     public function getObjectClass();
     
-    public function transform($model);
+    public function transform();
+    
+    public function canSaveIndex();
 }

@@ -12,6 +12,9 @@ return [
         'searchParams' => [
             'eleasticsearch' => [
                 'enable' => true,
+            ],
+            'elasticsearch-history' => [
+                'enable' => true,
             ]
         ]
     ]

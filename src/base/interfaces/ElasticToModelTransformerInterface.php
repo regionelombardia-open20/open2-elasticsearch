@@ -17,5 +17,5 @@ interface ElasticToModelTransformerInterface
      */
     public function getObjectClass();
     
-    public function transform($elasticObject);
+    public function transform();
 }

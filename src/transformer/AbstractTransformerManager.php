@@ -33,20 +33,30 @@ abstract class AbstractTransformerManager extends BaseObject implements Transfor
     
     /**
      * 
-     * @param type $model
+     * @param ActiveRecord $model
      */
     public function modelToElastic($model)
     {
-        return $this->getModelToElasticTransformer()->transform($model);
+        $transformer = $this->getModelToElasticTransformer();
+        return $transformer->cwh($transformer->setModel($model)->transform());
     }
     
     /**
      * 
-     * @param type $model
-     * @param type $index
+     * @param ActiveRecord $model
+     * @return boolean
+     */
+    public function canSaveIndex($model)
+    {
+        return $this->getModelToElasticTransformer()->setModel($model)->canSaveIndex();
+    }
+    
+    /**
+     * 
+     * @param array $index
      */
     public function elasticToModel($index)
     {
-        return $this->getElasticToModelTransformer()->transform($index);
+        return $this->getElasticToModelTransformer()->setElasticObject($index)->dropValues()->transform();
     }
 }

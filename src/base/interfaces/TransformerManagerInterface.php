@@ -16,6 +16,7 @@ interface TransformerManagerInterface
     public function getModelToElasticTransformer();
     
     public function modelToElastic($model);
+    public function canSaveIndex($model);
     public function elasticToModel($index);
     
 }

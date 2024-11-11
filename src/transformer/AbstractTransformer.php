@@ -14,6 +14,17 @@ use yii\base\BaseObject;
 
 abstract class AbstractTransformer extends BaseObject
 {
+    const NETWORKS_INDEX = "networks";
+    const TAGS_INDEX = "tags";
+    const STATUS_INDEX = "status";
+    
+    const PLATFORM_TAG = "PLATFORM";
+    const NOTAGS_TAG = "NOTAG";
+    
+    const DRAFT_VALUE = "draft";
+    const TO_VALIDATE_VALUE = "tovalidate";
+    const VALIDATED_VALUE = "validated";
+    
     
     /**
      * Class of the model to map to the elastica documents.
