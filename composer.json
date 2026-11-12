@@ -1,5 +1,6 @@
 {
     "name": "open20/amos-elasticsearch",
+    "license": "GPL-3.0-or-later",
     "description": "Amos Elasticsearch",
     "keywords": [
         "amos",
